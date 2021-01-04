@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, { useState } from 'react';
 
 import { FiPower, FiClock } from 'react-icons/fi';
 import {
@@ -9,6 +10,8 @@ import {
     Content,
     Schedule,
     NextAppointment,
+    Section,
+    Appointment,
     Calendar,
 } from './styles';
 
@@ -16,6 +19,8 @@ import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
 
 const Dashboard: React.FC = () => {
+    const [selectedDate, setSelectedDate] = useState(new Date());
+
     const { signOut, user } = useAuth();
 
     return (
@@ -59,6 +64,54 @@ const Dashboard: React.FC = () => {
                             </span>
                         </div>
                     </NextAppointment>
+
+                    <Section>
+                        <strong>Manha</strong>
+                        <Appointment>
+                            <span>
+                                <FiClock />
+                                08:00
+                            </span>
+                            <div>
+                                <img
+                                    src="https://avatars0.githubusercontent.com/u/38694868?s=460&u=21644cb97aaa22a39c58b0ca62685e30805b1520&v=4"
+                                    alt="Luis Felipe"
+                                />
+                                <strong>Luis Felipe</strong>
+                            </div>
+                        </Appointment>
+
+                        <Appointment>
+                            <span>
+                                <FiClock />
+                                08:00
+                            </span>
+                            <div>
+                                <img
+                                    src="https://avatars0.githubusercontent.com/u/38694868?s=460&u=21644cb97aaa22a39c58b0ca62685e30805b1520&v=4"
+                                    alt="Luis Felipe"
+                                />
+                                <strong>Luis Felipe</strong>
+                            </div>
+                        </Appointment>
+                    </Section>
+                    <Section>
+                        <strong>Tarde</strong>
+
+                        <Appointment>
+                            <span>
+                                <FiClock />
+                                08:00
+                            </span>
+                            <div>
+                                <img
+                                    src="https://avatars0.githubusercontent.com/u/38694868?s=460&u=21644cb97aaa22a39c58b0ca62685e30805b1520&v=4"
+                                    alt="Luis Felipe"
+                                />
+                                <strong>Luis Felipe</strong>
+                            </div>
+                        </Appointment>
+                    </Section>
                 </Schedule>
                 <Calendar />
             </Content>
