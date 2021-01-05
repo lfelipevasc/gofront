@@ -32,6 +32,7 @@
         "no-unused-expressions": "off",
         "react/jsx-indent-props": "off",
         "import/no-unresolved": "off",
+        "import/no-duplicates": "off",
         "react/jsx-indent": "off",
         "react/jsx-closing-tag-location": "off",
         "no-use-before-define": "off",
