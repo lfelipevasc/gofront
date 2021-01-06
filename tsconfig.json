@@ -22,6 +22,6 @@
   },
   "include": [
     "./src/**/*.ts",
-    "src/hooks/auth.tsx"
+    "src/hooks/auth.tsx", "src/__tests__/pages/SignIn.spec.tsx"
   ]
 }
